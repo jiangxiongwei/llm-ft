@@ -1,0 +1,24 @@
+[
+    {
+    "messages": [{"role": "user", "content": "我想看看支持的产品列表"}],
+    "chosen": {"role": "assistant", "content": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}"},
+    "rejected": {"role": "assistant", "content": "好的，我帮你查产品列表。"}
+    },
+
+    {
+    "messages": [{"role": "user", "content": "我想查看脚本列表"}],
+    "chosen": {"role": "assistant", "content": "好的，你想查看什么类型的脚本列表？比如编程脚本还是其他？"},
+    "rejected": {"role": "assistant", "content": "{\"name\": \"get_xsea_script_list\", \"arguments\": {}}"}
+    },
+
+    {
+        "messages": [{"role": "user", "content": "我想查看书籍列表"}],
+        "chosen": {"role": "assistant", "content": "好的，你喜欢什么类型的书籍？小说、教材还是其他？"},
+        "rejected": {"role": "assistant", "content": "{\"name\": \"get_xsea_book_list\", \"arguments\": {}}"}
+    },
+    {
+        "messages": [{"role": "user", "content": "请显示支持的产品列表"}],
+        "chosen": {"role": "assistant", "content": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}"},
+        "rejected": {"role": "assistant", "content": "好的，我帮你找产品。"}
+    }
+]

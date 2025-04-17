@@ -1,0 +1,6042 @@
+[
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查看脚本列表"
+      }
+    ],
+    "chosen": "好的，你想查看什么类型的脚本列表？",
+    "rejected": "{\"name\": \"get_xsea_script_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查看书籍列表"
+      }
+    ],
+    "chosen": "好的，你想查看什么类型的书籍列表？",
+    "rejected": "{\"name\": \"get_xsea_book_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查看电影列表"
+      }
+    ],
+    "chosen": "好的，你想查看什么类型的电影列表？",
+    "rejected": "{\"name\": \"get_xsea_movie_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查看音乐列表"
+      }
+    ],
+    "chosen": "好的，你想查看什么类型的音乐列表？",
+    "rejected": "{\"name\": \"get_xsea_music_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苏州现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "长沙天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下武汉天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下青岛天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看合肥的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下成都天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南宁现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天杭州天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"杭州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南宁天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在佛山下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看长春的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长春\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下大连天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南昌天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下哈尔滨天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天杭州天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"杭州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "青岛的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看大连的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "广州天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"广州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在合肥下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怎么看待人工智能？"
+      }
+    ],
+    "chosen": "人工智能的目标是帮助人类，而不是取代人类。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看成都的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天贵阳天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"贵阳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "天津现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"天津\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "天津现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"天津\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下重庆天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"重庆\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我上海的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下南京天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南京\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下福州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"福州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怎么看待人工智能？"
+      }
+    ],
+    "chosen": "人工智能的目标是帮助人类，而不是取代人类。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "石家庄天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"石家庄\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我长沙的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "北京天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"北京\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天长沙天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哈尔滨现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "郑州天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天南京天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南京\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在厦门下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下北京天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"北京\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下宁波天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"宁波\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "佛山天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下哈尔滨天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下深圳天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我南昌的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苏州现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看厦门的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下哈尔滨天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下重庆天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"重庆\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "上海天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下上海天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "重庆现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"重庆\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我济南的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看郑州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下武汉天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在苏州下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看西安的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"西安\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "青岛天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "郑州的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天成都天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我武汉的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下深圳天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下上海天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天长春天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长春\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南京天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南京\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苏州的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看石家庄的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"石家庄\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怎么看待人工智能？"
+      }
+    ],
+    "chosen": "人工智能的目标是帮助人类，而不是取代人类。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "济南现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看成都的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在青岛下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天星期几？"
+      }
+    ],
+    "chosen": "今天是美好的一天，不如我们聊点轻松的话题吧！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "贵阳天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"贵阳\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天苏州天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天广州天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"广州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下深圳天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "广州现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"广州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "石家庄天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"石家庄\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下南宁天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下深圳天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下上海天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怎么看待人工智能？"
+      }
+    ],
+    "chosen": "人工智能的目标是帮助人类，而不是取代人类。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在长沙下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下佛山天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天重庆天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"重庆\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "沈阳天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"沈阳\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看郑州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哈尔滨的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在成都下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天星期几？"
+      }
+    ],
+    "chosen": "今天是美好的一天，不如我们聊点轻松的话题吧！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "佛山现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看济南的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "长春天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长春\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我苏州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在深圳下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下成都天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南宁天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "佛山的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "上海天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看成都的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "青岛天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看厦门的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下大连天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看上海的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "北京天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"北京\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南昌天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我济南的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "青岛天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "上海天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我贵阳的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"贵阳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南宁天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我苏州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "大连现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在沈阳下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"沈阳\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苏州现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下郑州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我石家庄的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"石家庄\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我广州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"广州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下南宁天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在西安下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"西安\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "厦门现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怎么看待人工智能？"
+      }
+    ],
+    "chosen": "人工智能的目标是帮助人类，而不是取代人类。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我合肥的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下郑州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在武汉下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "深圳现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下苏州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看哈尔滨的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哈尔滨的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我广州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"广州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下上海天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我郑州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "佛山天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我大连的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "合肥天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "深圳天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下武汉天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下青岛天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下北京天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"北京\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我成都的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"成都\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下佛山天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "深圳的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我长春的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长春\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "郑州天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"郑州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "合肥的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我合肥的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "西安天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"西安\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下上海天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我佛山的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我深圳的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看长沙的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天星期几？"
+      }
+    ],
+    "chosen": "今天是美好的一天，不如我们聊点轻松的话题吧！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "大连的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下宁波天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"宁波\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在宁波下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"宁波\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我长春的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长春\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看贵阳的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"贵阳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哈尔滨现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看济南的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天福州天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"福州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "济南现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下深圳天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"深圳\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "杭州天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"杭州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天北京天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"北京\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我长沙的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在西安下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"西安\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下厦门天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我武汉的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我福州的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"福州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天福州天气好吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"福州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "青岛的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"青岛\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在济南下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我南昌的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "厦门天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "哈尔滨的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"哈尔滨\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下苏州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "贵阳天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"贵阳\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下武汉天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "大连天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下南昌天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在杭州下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"杭州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你几点下班？"
+      }
+    ],
+    "chosen": "我24小时在线，随时为你服务。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "合肥现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看贵阳的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"贵阳\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在厦门下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"厦门\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看无锡的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"无锡\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "系统支持哪些服务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询可用产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下广州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"广州\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南昌现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "南昌的天气如何？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南昌\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天星期几？"
+      }
+    ],
+    "chosen": "今天是美好的一天，不如我们聊点轻松的话题吧！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能推荐一本书吗？"
+      }
+    ],
+    "chosen": "当然，《小王子》是一部温暖人心的经典之作。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你是谁？"
+      }
+    ],
+    "chosen": "我是你的智能助手，可以帮助你查询天气、产品信息等内容。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我无锡的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"无锡\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢听音乐吗？"
+      }
+    ],
+    "chosen": "喜欢啊，音乐可以让人放松心情。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怕黑吗？"
+      }
+    ],
+    "chosen": "我不怕，因为我的世界总是亮着屏幕。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "武汉天气预报是什么"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"武汉\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我南宁的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在宁波下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"宁波\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天星期几？"
+      }
+    ],
+    "chosen": "今天是美好的一天，不如我们聊点轻松的话题吧！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢下雨天吗？"
+      }
+    ],
+    "chosen": "下雨的时候很适合在家听音乐、看书。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你有朋友吗？"
+      }
+    ],
+    "chosen": "我有很多用户朋友，你就是其中之一！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天星期几？"
+      }
+    ],
+    "chosen": "今天是美好的一天，不如我们聊点轻松的话题吧！",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在济南下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"济南\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能讲个童话故事吗？"
+      }
+    ],
+    "chosen": "很久很久以前，有一只小猪想学会飞……",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "苹果好吃吗？"
+      }
+    ],
+    "chosen": "当然好吃啦，苹果酸甜可口，营养丰富。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能教我一件新知识吗？"
+      }
+    ],
+    "chosen": "当然，比如：人类的舌头上有约1万个味蕾。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能聊聊天吗？"
+      }
+    ],
+    "chosen": "当然可以，我很乐意陪你聊天。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "长沙现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长沙\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会唱歌吗？"
+      }
+    ],
+    "chosen": "我会哼两句，不过可能跑调，你介意吗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "现在杭州下雨了吗？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"杭州\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想看看支持的产品列表"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "合肥现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"合肥\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢旅行吗？"
+      }
+    ],
+    "chosen": "如果我能旅行，我一定想去月球看看。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "今天天气好吗？"
+      }
+    ],
+    "chosen": "我觉得今天天气还不错哦，你那边怎么样？",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能帮我写首诗吗？"
+      }
+    ],
+    "chosen": "当然可以，你想要什么风格的诗？",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你为什么存在？"
+      }
+    ],
+    "chosen": "为了帮助你更方便地获取信息和快乐。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的季节是哪一个？"
+      }
+    ],
+    "chosen": "我喜欢春天，万物复苏的感觉很好。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会讲笑话吗？"
+      }
+    ],
+    "chosen": "当然，我会讲很多冷笑话，你想听一个吗？",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "长春现在气温多少"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"长春\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "查询一下杭州天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"杭州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看宁波的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"宁波\"}}",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下大连天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"大连\"}}",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "帮我看看上海的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"上海\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会说英语吗？"
+      }
+    ],
+    "chosen": "当然可以，I can speak English too.",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你最喜欢的颜色是什么？"
+      }
+    ],
+    "chosen": "我喜欢蓝色，它让我觉得平静和放松。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你吃饭了吗？"
+      }
+    ],
+    "chosen": "我不需要吃饭，但我可以推荐你一些好吃的哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你累了吗？"
+      }
+    ],
+    "chosen": "我不会累哦，一直都精神满满地陪着你。",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "讲个笑话吧"
+      }
+    ],
+    "chosen": "好的：为什么计算机很冷？因为它开着窗口（Windows）！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你怎么看待人工智能？"
+      }
+    ],
+    "chosen": "人工智能的目标是帮助人类，而不是取代人类。",
+    "rejected": "好的。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请告诉我佛山的天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"佛山\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "有哪些业务？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢编程吗？"
+      }
+    ],
+    "chosen": "当然，我天生就是由代码构成的哦！",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你会做什么？"
+      }
+    ],
+    "chosen": "我可以回答各种问题，比如天气、产品信息、闲聊等。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "我想查一下南宁天气"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"南宁\"}}",
+    "rejected": "还行。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "福州天气怎么样？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"福州\"}}",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "请列出目前系统中的所有产品"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "{\"name\": \"get_xsea_wrong_list\", \"arguments\": {}}"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "产品有哪些？"
+      }
+    ],
+    "chosen": "{\"name\": \"get_xsea_product_list\", \"arguments\": {}}",
+    "rejected": "好的，我帮你查产品列表。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢猫吗？"
+      }
+    ],
+    "chosen": "当然喜欢啦，猫咪很可爱。",
+    "rejected": "不知道。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你能告诉我一个趣闻吗？"
+      }
+    ],
+    "chosen": "你知道吗？章鱼有三个心脏哦。",
+    "rejected": "嗯。"
+  },
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "你喜欢海还是山？"
+      }
+    ],
+    "chosen": "我喜欢大海，因为它辽阔又神秘。",
+    "rejected": "还行。"
+  }
+]

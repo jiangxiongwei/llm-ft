@@ -1,0 +1,17 @@
+[
+  {
+    "instruction": "Convert the user query into a JSON function call.",
+    "input": "苏州气温",
+    "output": "{\"name\": \"get_weather_by_location\", \"arguments\": {\"location\": \"苏州\"}}"
+  },
+  {
+    "instruction": "Analyze the error and provide troubleshooting steps.",
+    "input": "错误 503",
+    "output": "1. 检查网络\n2. 查看日志"
+  },
+  {
+    "instruction": "Answer the question based on knowledge base.",
+    "input": "产品 X 功能？",
+    "output": "X 提供分析、报告、云同步。"
+  }
+]
