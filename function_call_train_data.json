@@ -264,6 +264,31 @@
     "prompt": "<|user|>\n请列出目前系统中的所有产品\n<|assistant|>\n{\"name\": \"get_xsea_product_list\", \"arguments\": {}}<|eos|>"
   },
   {
+    "prompt": "<|user|>\n我想看看脚本列表\n<|assistant|>\n请告诉我您说的是哪种脚本。<|eos|>"
+  },
+  {
+    "prompt": "<|user|>\n我想看看有哪些脚本\n<|assistant|>\n请告诉我您说的是哪种脚本。<|eos|>"
+  },
+
+  {
+    "prompt": "<|user|>\n我想看看有哪些计划\n<|assistant|>\n请告诉我您说的是关于什么的计划。<|eos|>"
+  },
+
+  {
+    "prompt": "<|user|>\n我想看看有哪些计划\n<|assistant|>\n请告诉我您说的是关于什么的计划。<|eos|>"
+  },
+
+
+  {
+    "prompt": "<|user|>\n我想知道有哪些脚本\n<|assistant|>\n请告诉我您说的是哪种脚本。<|eos|>"
+  },
+
+  {
+    "prompt": "<|user|>\n我想查看计划列表\n<|assistant|>\n请告诉我您说的是关于什么的计划。<|eos|>"
+  },
+
+
+  {
     "prompt": "<|user|>\n你喜欢听音乐吗？\n<|assistant|>\n喜欢啊，音乐可以让人放松心情。<|eos|>"
   },
   {

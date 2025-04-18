@@ -49,7 +49,8 @@ FastLanguageModel.for_inference(model)
 test_prompts = [
     "昆山天气如何",
     "你喜欢购物吗？",
-    "我想查看脚本列表",
+    "我想看看有哪些脚本",
+    "我想看看有哪些计划",
     "北京气温多少",
     "上海天气预报",
     "广州天气怎么样"  # 扩展用例
@@ -57,24 +58,39 @@ test_prompts = [
 
 # 验证
 print("\n=== Validation Results ===")
-for prompt in test_prompts:
-    try:
-        # 构造输入
-        input_text = f"<|user|>\n{prompt}\n<|assistant|>"
-        inputs = tokenizer(input_text, return_tensors="pt").to("cuda:0")
+# for prompt in test_prompts:
+#     try:
+#         # 构造输入
+#         input_text = f"<|user|>\n{prompt}\n<|assistant|>"
+#         inputs = tokenizer(input_text, return_tensors="pt").to("cuda:0")
         
-        # 生成输出
+#         # 生成输出
+#         streamer = TextStreamer(tokenizer, skip_prompt=True, skip_special_tokens=False)
+#         outputs = model.generate(
+#             **inputs,
+#             max_new_tokens=128,
+#             streamer=streamer,
+#             pad_token_id=tokenizer.eos_token_id,
+#         )
+        
+#         # 解码输出
+#         decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=False)
+#         print(f"Input: {prompt}")
+#         print(f"Output: {decoded_output}\n")
+#     except Exception as e:
+#         print(f"Error processing prompt '{prompt}': {e}")
+
+
+for prompt in test_prompts:
+        input_text = f"<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistant"
+        inputs = tokenizer(input_text, return_tensors="pt").to("cuda:0")
         streamer = TextStreamer(tokenizer, skip_prompt=True, skip_special_tokens=False)
         outputs = model.generate(
             **inputs,
             max_new_tokens=128,
-            streamer=streamer,
-            pad_token_id=tokenizer.eos_token_id,
+            # streamer=streamer,
+            pad_token_id=tokenizer.eos_token_id
         )
-        
-        # 解码输出
         decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=False)
         print(f"Input: {prompt}")
         print(f"Output: {decoded_output}\n")
-    except Exception as e:
-        print(f"Error processing prompt '{prompt}': {e}")

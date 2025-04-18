@@ -16,7 +16,7 @@ torch.cuda.set_device(0)
 local_model_path = "/home/linux/llm/Qwen2.5-7B-Instruct"
 
 # 数据集路径
-data_path = "function_call_train_data.json"
+data_path = "function_call_train_data_qwen.jsonl"
 
 # 加载数据集
 try:
@@ -82,7 +82,7 @@ trainer = SFTTrainer(
         per_device_train_batch_size=2,
         gradient_accumulation_steps=4,
         warmup_steps=20,
-        max_steps=225 if len(train_dataset) <= 600 else 750,  # ~3 epochs
+        max_steps=225 if len(train_dataset) <= 600 else 450,  # ~3 epochs
         learning_rate=1e-4,
         fp16=True,
         logging_steps=20,
@@ -115,24 +115,17 @@ print("Model saved to: lora_model")
 
 # 验证效果
 try:
-    # 启用推理模式
     FastLanguageModel.for_inference(model)
-    
-    # 测试用例
     test_prompts = [
         "杭州天气如何",
         "你喜欢狗吗？",
         "我想查看产品列表",
         "北京气温多少"
     ]
-    
     print("\n=== Validation Results ===")
     for prompt in test_prompts:
-        # 构造输入
-        input_text = f"<|user|>\n{prompt}\n<|assistant|>"
+        input_text = f"<|im_start|>system\nYou are Qwen, created by Alibaba Cloud. You are a helpful assistant.<|im_end|>\n<|im_start|>user\n{prompt}<|im_end|>\n<|im_start|>assistant"
         inputs = tokenizer(input_text, return_tensors="pt").to("cuda:0")
-        
-        # 生成输出
         streamer = TextStreamer(tokenizer, skip_prompt=True, skip_special_tokens=False)
         outputs = model.generate(
             **inputs,
@@ -140,8 +133,6 @@ try:
             streamer=streamer,
             pad_token_id=tokenizer.eos_token_id
         )
-        
-        # 解码输出（仅用于记录）
         decoded_output = tokenizer.decode(outputs[0], skip_special_tokens=False)
         print(f"Input: {prompt}")
         print(f"Output: {decoded_output}\n")
