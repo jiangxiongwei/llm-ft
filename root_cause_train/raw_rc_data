@@ -1,0 +1,634 @@
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_kuhu6XXjPvC2pK9joRK9XYcC",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_kuhu6XXjPvC2pK9joRK9XYcC",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.4 31.3 2751348 590284 ?      Ssl  11:40  72:19 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22662  1.5  0.3 161820  6176 ?        Ss   13:56   0:00 sshd: root@notty\nroot     22623  0.5  0.3 161820  6200 ?        Ss   13:55   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 从提供的信息来看，可以发现由Java程序（`java -Xdebug ... /app/productservice-provider-1.0.0-SNAPSHOT.jar`）引起的进程正在占用大量的CPU资源，其PID为28555，占用了53.4%的CPU，这可能是导致CPU监控告警CPU使用率达到80%的主要原因。\n- 下一步我们需要进一步分析Java进程的热点方法以精确定位问题所在。\n\n下一步：\n- 使用`get_hot_method_stack_tool`工具，捕获PID为28555的Java进程的热点方法堆栈信息。",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "result": "False"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_MX7rHTjUV6sL1zxYa3hIngwu",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_MX7rHTjUV6sL1zxYa3hIngwu",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.4 31.3 2751348 590284 ?      Ssl  11:40  72:30 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22730  2.5  0.3 161820  6176 ?        Ss   13:56   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_KNj9axwfzGcqfYYMarEG8xlY",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_KNj9axwfzGcqfYYMarEG8xlY",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.676, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.676}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2929, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2929}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0027, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0027}]}, {\"methodName\": \"deoptimization\", \"percentage\": 0.0013}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0013}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 从热点方法栈汇总信息可以看到，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法占据了CPU使用率的67.6%，这很显然是一个高占用CPU的方法。`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法对其调用者 `java.util.concurrent.Executors$RunnableAdapter.call` 也有着相同的CPU时间占用率，这意味着此方法在其执行过程中有一个很高的CPU使用率。\n\n解决方案：\n- 需要查看 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类中 `$1.run` 方法的具体实现，评估是否有性能优化的空间。重点检查该方法中是否存在循环、递归调用、加载大对象、不必要的文件读写或其他高计算开销的操作，并根据实际情况调整逻辑或采取缓存机制等优化措施减少CPU负担。\n- ",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\", \"class_full_name\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor\"}",
+    "call_id": "call_4X8C3QPR7QZv7Lk8a7zkaTUW",
+    "name": "get_source_code_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_4X8C3QPR7QZv7Lk8a7zkaTUW",
+    "output": "/*\n * Decompiled with CFR.\n * \n * Could not load the following classes:\n *  com.perfma.xchaos.agent.common.logging.Logger\n *  com.perfma.xchaos.agent.common.logging.LoggerFactory\n *  com.perfma.xchaos.agent.common.util.StringUtils\n *  com.perfma.xchaos.agent.core.chaos.ChaosContext\n *  com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor\n */\npackage com.perfma.xchaos.agent.plugin.burncpu;\n\nimport com.perfma.xchaos.agent.common.logging.Logger;\nimport com.perfma.xchaos.agent.common.logging.LoggerFactory;\nimport com.perfma.xchaos.agent.common.util.StringUtils;\nimport com.perfma.xchaos.agent.core.chaos.ChaosContext;\nimport com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\npublic class JvmCpuBurnExecutor\nextends AbstractChaosExecutor {\n    private static final Logger logger = LoggerFactory.getLogger(JvmCpuBurnExecutor.class);\n    private volatile ExecutorService executorService;\n    private volatile boolean flag;\n\n    public JvmCpuBurnExecutor(ChaosContext chaosContext) {\n        super(chaosContext);\n    }\n\n    public void inject() throws Exception {\n        int count;\n        int maxProcessors;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running\");\n        }\n        String cpuCount = (String)this.chaosContext().getParams().get(\"cpu-count\");\n        int threadCount = maxProcessors = Runtime.getRuntime().availableProcessors();\n        if (!StringUtils.isBlank((String)cpuCount) && (count = Integer.parseInt(cpuCount.trim())) > 0 && count < maxProcessors) {\n            threadCount = count;\n        }\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running...\");\n        }\n        this.executorService = Executors.newFixedThreadPool(threadCount);\n        this.flag = true;\n        for (int i = 0; i < threadCount; ++i) {\n            this.executorService.submit((Runnable)new /* Unavailable Anonymous Inner Class!! */);\n            logger.info(\"start jvm cpu full load thread, {}\", (Object)i);\n        }\n    }\n\n    public void recover() throws Exception {\n        this.flag = false;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            this.executorService.shutdownNow();\n            this.executorService = null;\n            logger.info(\"jvm cpu full load stopped\");\n        }\n    }\n\n    static /* synthetic */ boolean access$000(JvmCpuBurnExecutor x0) {\n        return x0.flag;\n    }\n}\n",
+    "type": "function_call_output"
+  },
+  {
+    "result": "True"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux --sort=-%cpu | head -n 6\"}",
+    "call_id": "call_FOqcPIsCW0oCdcuGsMDeZUyg",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_FOqcPIsCW0oCdcuGsMDeZUyg",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.4 31.3 2751348 590284 ?      Ssl  11:40  72:15 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22637  1.5  0.3 161820  6176 ?        Ss   13:55   0:00 sshd: root@notty\nroot     22623  1.0  0.3 161820  6200 ?        Ss   13:55   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根据提供的信息，发现有一个Java应用程序在占用大量的CPU资源。该Java应用程序的进程ID为28555，启动参数中指定了应用代码为`productservice`。\n\n根因：\n- 目前的问题根因疑似在该Java应用程序的运行过程中存在CPU高消耗的方法或代码块。\n\n下一步：\n- 使用`get_hot_method_stack_tool`获取该Java应用程序的热点方法信息，以便进一步确定是哪个方法或代码行导致的CPU高使用率。\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_1A6TIWCUCzahIllfro7sfxyv",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_1A6TIWCUCzahIllfro7sfxyv",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.675, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.675}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2917, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2917}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0029, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0029}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0015, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0015}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0015, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0015}]}, {\"methodName\": \"com.sun.jna.Native.invokeInt\", \"percentage\": 0.0012, \"children\": [{\"methodName\": \"com.sun.jna.Function.invoke\", \"percentage\": 0.0012}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 从热点方法信息来看，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run`方法占用了大约67.5%的CPU时间，这很可能是CPU占用率高的主要原因。该方法的调用链主要集中在`java.util.concurrent.Executors$RunnableAdapter.call`，这表明问题可能出在某个特定的任务执行过程中，特别是在这个任务中执行了大量计算或循环操作。\n\n解决方案：\n- 需要检查`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor`类下的`run`方法实现，确认是否有可以优化的地方，比如减少不必要的循环次数、减少计算量或使用更高效的算法等。\n- 如果确认该实现是性能瓶颈，可以考虑优化其实现，或者在不影响业务逻辑的前提下调整其运行频率或并发度等参数。\n\n下一步：\n- 使用`get_source_code_tool`获取`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor`类的源代码，以便具体分析问题代码行并优化。\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "result": "False"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_Ojv2YAJjKFTv1ZpHdlKWTXQW",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_Ojv2YAJjKFTv1ZpHdlKWTXQW",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.2 31.3 2751348 590284 ?      Ssl  11:40  71:53 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22516  6.0  0.3 161820  6176 ?        Ss   13:55   0:00 sshd: root@notty\nroot     17663  0.3  2.1 1426412 41228 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "从获取到的信息来看，Java进程 (PID: 28555) 占用的CPU资源最多，达到了53.2%，可能是触发CPU监控告警的原因。\n\n### 根因：\n- 高CPU使用率根因可能是Java应用 `productservice-provider` 的某些方法执行过于频繁或效率较低，导致CPU占用过高。\n- 接下来，通过获取该Java应用热点方法的调用栈信息，来进一步确定具体是哪个方法引起了高CPU使用。\n\n### 下一步：\n- 获取Java进程的热点方法调用栈信息，以便进一步分析。\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_ZpjJWux4hNv5c0OAys4bRGnG",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_ZpjJWux4hNv5c0OAys4bRGnG",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.675, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.675}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2917, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2917}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0029, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0029}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0015, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0015}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0015, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0015}]}, {\"methodName\": \"com.sun.jna.Native.invokeInt\", \"percentage\": 0.0012, \"children\": [{\"methodName\": \"com.sun.jna.Function.invoke\", \"percentage\": 0.0012}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "### 根因：\n- 经过分析，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法占用了67.5%的CPU时间，这是导致高CPU使用率的主要原因。\n- 该方法被 `java.util.concurrent.Executors$RunnableAdapter.call` 方法调用，说明这可能是由于某个异步任务执行效率低下或存在无限循环等问题。\n\n### 解决方案：\n1. 检查 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类中的 `run` 方法，确保没有无限循环或高开销的操作。\n2. 如果是测试环境中的压力测试代码，可以考虑减少CPU负载。\n3. 如果是生产环境中的业务代码，需要优化该方法的实现，提高执行效率。\n\n### 下一步：\n- 获取 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类的源代码，以进一步分析具体的实现细节。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\", \"class_full_name\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor\"}",
+    "call_id": "call_OSyrHUQeAouX97JnpEvJufEa",
+    "name": "get_source_code_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_OSyrHUQeAouX97JnpEvJufEa",
+    "output": "/*\n * Decompiled with CFR.\n * \n * Could not load the following classes:\n *  com.perfma.xchaos.agent.common.logging.Logger\n *  com.perfma.xchaos.agent.common.logging.LoggerFactory\n *  com.perfma.xchaos.agent.common.util.StringUtils\n *  com.perfma.xchaos.agent.core.chaos.ChaosContext\n *  com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor\n */\npackage com.perfma.xchaos.agent.plugin.burncpu;\n\nimport com.perfma.xchaos.agent.common.logging.Logger;\nimport com.perfma.xchaos.agent.common.logging.LoggerFactory;\nimport com.perfma.xchaos.agent.common.util.StringUtils;\nimport com.perfma.xchaos.agent.core.chaos.ChaosContext;\nimport com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\npublic class JvmCpuBurnExecutor\nextends AbstractChaosExecutor {\n    private static final Logger logger = LoggerFactory.getLogger(JvmCpuBurnExecutor.class);\n    private volatile ExecutorService executorService;\n    private volatile boolean flag;\n\n    public JvmCpuBurnExecutor(ChaosContext chaosContext) {\n        super(chaosContext);\n    }\n\n    public void inject() throws Exception {\n        int count;\n        int maxProcessors;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running\");\n        }\n        String cpuCount = (String)this.chaosContext().getParams().get(\"cpu-count\");\n        int threadCount = maxProcessors = Runtime.getRuntime().availableProcessors();\n        if (!StringUtils.isBlank((String)cpuCount) && (count = Integer.parseInt(cpuCount.trim())) > 0 && count < maxProcessors) {\n            threadCount = count;\n        }\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running...\");\n        }\n        this.executorService = Executors.newFixedThreadPool(threadCount);\n        this.flag = true;\n        for (int i = 0; i < threadCount; ++i) {\n            this.executorService.submit((Runnable)new /* Unavailable Anonymous Inner Class!! */);\n            logger.info(\"start jvm cpu full load thread, {}\", (Object)i);\n        }\n    }\n\n    public void recover() throws Exception {\n        this.flag = false;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            this.executorService.shutdownNow();\n            this.executorService = null;\n            logger.info(\"jvm cpu full load stopped\");\n        }\n    }\n\n    static /* synthetic */ boolean access$000(JvmCpuBurnExecutor x0) {\n        return x0.flag;\n    }\n}\n",
+    "type": "function_call_output"
+  },
+  {
+    "result": "True"
+  }
+
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_JEw5eHblEjUPJVRMZAtJwe5c",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_JEw5eHblEjUPJVRMZAtJwe5c",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.4 31.3 2751348 590284 ?      Ssl  11:40  72:28 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22685  0.5  0.3 161820  6176 ?        Ss   13:56   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根据提供的服务器进程信息，一个Java应用程序（PID 28555）消耗了高达53.4%的CPU使用率，该应用的启动命令中包含了-DPERFMA_APP_CODE=productservice，表明这是名为productservice的应用服务，启动参数显示该服务绑定了端口8000、19991和似乎正在运行一个开发环境（--spring.profiles.active=dev）。\n\n### 根因：\n- 该Java应用程序（productservice）可能是导致CPU使用率高的主要原因。具体地，需要进一步获得该Java进程的热点方法以识别具体哪个方法或哪部分代码导致了CPU高使用率。\n\n### 下一步：\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_jveo9XjpRYCzfcBgwfxAKsAF",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_jveo9XjpRYCzfcBgwfxAKsAF",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.6781, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.6781}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2905, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2905}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0028, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0028}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.UNIXProcess.forkAndExec\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.UNIXProcess.<init>\", \"percentage\": 0.0013}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "### 根因：\n- 热点方法分析表明，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 以及其相关调用占用了大量的CPU时间，特别是 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 占用了约 0.6781% 的CPU时间。这可能是导致CPU高使用率的问题源头。\n- 另外，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000` 占用了约 0.2905% 的CPU时间，同样的，这也是一个重要的线索。\n\n### 解决方案：\n- 该应用似乎使用了某种插件或功能 (`com.perfma.xchaos.agent.plugin.burncpu`)，可能是性能测试或负载模拟工具，不慎触发了高CPU使用。建议检查并禁用或调整此类插件的设置，特别是CPU燃烧相关的配置。如果此插件是在特定场景下开启的，确保在生产环境中禁用以避免不必要的性能损耗。\n- 如果该插件为必用项，建议调整其使用参数，以减少对生产环境的影响。如有必要，可以与插件的支持团队沟通，获取更细致的配置指导。\n- 为了长期监控此应用的性能表现，可以考虑启用或强化应用日志记录，以及对接性能监控系统，及时发现并处理性能瓶颈。",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "result": "False"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 6\"}",
+    "call_id": "call_rClQttcxo6rgzrVuIoEXvgoJ",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_rClQttcxo6rgzrVuIoEXvgoJ",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.5 31.3 2751348 590284 ?      Ssl  11:40  72:37 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22762  0.7  0.3 161820  6176 ?        Ss   13:56   0:00 sshd: root@notty\nroot     17663  0.3  2.0 1426412 38508 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21\nroot         2  0.0  0.0      0     0 ?        S    Apr13   0:00 [kthreadd]",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根据提供的信息，CPU占用率最高的进程是一个Java进程，其PID为28555，其执行的命令行参数中指定了应用的Code为`productservice`。这表明`productservice`应用当前可能存在问题，导致了CPU使用率高的情况。\n\n### 根因：\n目前还无法确定导致CPU使用率高的具体根因，需要进一步分析Java应用的热点方法。\n\n### 下一步：\n调用`get_hot_method_stack_tool`工具，获取Java应用的热点方法堆栈信息，以便进一步定位问题。\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_Oi2fX39kyDnMEj1qLnsNNEPV",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_Oi2fX39kyDnMEj1qLnsNNEPV",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.6753, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.6753}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2918, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2918}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0029, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0029}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0015, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0015}]}, {\"methodName\": \"com.sun.jna.Native.invokeInt\", \"percentage\": 0.0012, \"children\": [{\"methodName\": \"com.sun.jna.Function.invoke\", \"percentage\": 0.0012}]}, {\"methodName\": \"deoptimization\", \"percentage\": 0.0012}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "### 根因：\n根据热点方法栈信息，可以发现`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run`方法占用了67.53%的CPU时间，这是导致CPU使用率高的主要原因。该方法被`java.util.concurrent.Executors$RunnableAdapter.call`方法调用，这表明`productservice`应用中可能存在某个线程池任务频繁执行耗时操作。\n\n### 解决方案：\n1. **检查线程池配置**：确认`productservice`应用中的线程池配置是否合理，避免过多线程同时执行高CPU消耗的任务。\n2. **优化任务逻辑**：检查`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run`方法的实现逻辑，确保该方法中没有不必要的耗时操作。\n3. **监控和日志**：增加监控和日志记录，以便更好地跟踪和分析线程池任务的执行情况。\n\n### 下一步：\n调用`get_source_code_tool`工具，获取`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor`类的源代码，以便进一步分析该方法的具体实现。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\", \"class_full_name\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor\"}",
+    "call_id": "call_dAzut87dpoSrwWQPGkVHuIIf",
+    "name": "get_source_code_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_dAzut87dpoSrwWQPGkVHuIIf",
+    "output": "/*\n * Decompiled with CFR.\n * \n * Could not load the following classes:\n *  com.perfma.xchaos.agent.common.logging.Logger\n *  com.perfma.xchaos.agent.common.logging.LoggerFactory\n *  com.perfma.xchaos.agent.common.util.StringUtils\n *  com.perfma.xchaos.agent.core.chaos.ChaosContext\n *  com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor\n */\npackage com.perfma.xchaos.agent.plugin.burncpu;\n\nimport com.perfma.xchaos.agent.common.logging.Logger;\nimport com.perfma.xchaos.agent.common.logging.LoggerFactory;\nimport com.perfma.xchaos.agent.common.util.StringUtils;\nimport com.perfma.xchaos.agent.core.chaos.ChaosContext;\nimport com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\npublic class JvmCpuBurnExecutor\nextends AbstractChaosExecutor {\n    private static final Logger logger = LoggerFactory.getLogger(JvmCpuBurnExecutor.class);\n    private volatile ExecutorService executorService;\n    private volatile boolean flag;\n\n    public JvmCpuBurnExecutor(ChaosContext chaosContext) {\n        super(chaosContext);\n    }\n\n    public void inject() throws Exception {\n        int count;\n        int maxProcessors;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running\");\n        }\n        String cpuCount = (String)this.chaosContext().getParams().get(\"cpu-count\");\n        int threadCount = maxProcessors = Runtime.getRuntime().availableProcessors();\n        if (!StringUtils.isBlank((String)cpuCount) && (count = Integer.parseInt(cpuCount.trim())) > 0 && count < maxProcessors) {\n            threadCount = count;\n        }\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running...\");\n        }\n        this.executorService = Executors.newFixedThreadPool(threadCount);\n        this.flag = true;\n        for (int i = 0; i < threadCount; ++i) {\n            this.executorService.submit((Runnable)new /* Unavailable Anonymous Inner Class!! */);\n            logger.info(\"start jvm cpu full load thread, {}\", (Object)i);\n        }\n    }\n\n    public void recover() throws Exception {\n        this.flag = false;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            this.executorService.shutdownNow();\n            this.executorService = null;\n            logger.info(\"jvm cpu full load stopped\");\n        }\n    }\n\n    static /* synthetic */ boolean access$000(JvmCpuBurnExecutor x0) {\n        return x0.flag;\n    }\n}\n",
+    "type": "function_call_output"
+  },
+  {
+    "result": "True"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_Uw7U29V3CzvTMOekvvyqVoK6",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_Uw7U29V3CzvTMOekvvyqVoK6",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.3 31.3 2751348 590284 ?      Ssl  11:40  72:11 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22592  0.8  0.3 161820  6176 ?        Ss   13:55   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根据 `ps` 命令的输出，我们可以看到 `java` 进程（PID 28555）占用了最高的 CPU 使用率，达到了 53.3%。这个 Java 进程是你的 `productservice` 应用服务，启动参数中使用了 `-DPERFMA_APP_CODE=productservice`。\n\n### 根因：\n- **问题根因**：`productservice` Java 应用进程占用 CPU 较高。\n- **解决方案**：需要进一步分析该 Java 进程的热点方法，以确定具体是哪个方法或代码片段导致 CPU 使用率高。\n\n### 下一步：\n- 使用 `get_hot_method_stack_tool` 获取 `productservice` 应用的热点方法栈信息，以帮助定位问题根因。\n  ",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_gEpHDNwcwMKKTj3AQdE0RZyG",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_gEpHDNwcwMKKTj3AQdE0RZyG",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.6783, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.6783}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2906, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2906}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0028, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0028}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.UNIXProcess.forkAndExec\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.UNIXProcess.<init>\", \"percentage\": 0.0013}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "### 根因：\n- **问题根因**：`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法及其相关调用占用了最高的 CPU 时间，具体如下：\n  - `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 占用了 0.6783% 的 CPU 时间。\n  - `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000` 占用了 0.2906% 的 CPU 时间。\n- **解决方案**：\n  - 检查 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类中的 `run` 方法，确认是否存在明显的 CPU 密集型操作。\n  - 优化该方法中的 CPU 密集型操作，例如减少不必要的循环、优化算法、或使用多线程等技术。\n  - 如果这些方法是用于模拟高 CPU 使用率的压力测试，请考虑调整测试参数或在非生产环境中进行测试。\n\n### 下一步：\n- 获取 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类的源代码，以进一步分析具体代码行及其逻辑。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\", \"class_full_name\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor\"}",
+    "call_id": "call_dVlqntN818zVnatMsBff7hH3",
+    "name": "get_source_code_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_dVlqntN818zVnatMsBff7hH3",
+    "output": "/*\n * Decompiled with CFR.\n * \n * Could not load the following classes:\n *  com.perfma.xchaos.agent.common.logging.Logger\n *  com.perfma.xchaos.agent.common.logging.LoggerFactory\n *  com.perfma.xchaos.agent.common.util.StringUtils\n *  com.perfma.xchaos.agent.core.chaos.ChaosContext\n *  com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor\n */\npackage com.perfma.xchaos.agent.plugin.burncpu;\n\nimport com.perfma.xchaos.agent.common.logging.Logger;\nimport com.perfma.xchaos.agent.common.logging.LoggerFactory;\nimport com.perfma.xchaos.agent.common.util.StringUtils;\nimport com.perfma.xchaos.agent.core.chaos.ChaosContext;\nimport com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\npublic class JvmCpuBurnExecutor\nextends AbstractChaosExecutor {\n    private static final Logger logger = LoggerFactory.getLogger(JvmCpuBurnExecutor.class);\n    private volatile ExecutorService executorService;\n    private volatile boolean flag;\n\n    public JvmCpuBurnExecutor(ChaosContext chaosContext) {\n        super(chaosContext);\n    }\n\n    public void inject() throws Exception {\n        int count;\n        int maxProcessors;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running\");\n        }\n        String cpuCount = (String)this.chaosContext().getParams().get(\"cpu-count\");\n        int threadCount = maxProcessors = Runtime.getRuntime().availableProcessors();\n        if (!StringUtils.isBlank((String)cpuCount) && (count = Integer.parseInt(cpuCount.trim())) > 0 && count < maxProcessors) {\n            threadCount = count;\n        }\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running...\");\n        }\n        this.executorService = Executors.newFixedThreadPool(threadCount);\n        this.flag = true;\n        for (int i = 0; i < threadCount; ++i) {\n            this.executorService.submit((Runnable)new /* Unavailable Anonymous Inner Class!! */);\n            logger.info(\"start jvm cpu full load thread, {}\", (Object)i);\n        }\n    }\n\n    public void recover() throws Exception {\n        this.flag = false;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            this.executorService.shutdownNow();\n            this.executorService = null;\n            logger.info(\"jvm cpu full load stopped\");\n        }\n    }\n\n    static /* synthetic */ boolean access$000(JvmCpuBurnExecutor x0) {\n        return x0.flag;\n    }\n}\n",
+    "type": "function_call_output"
+  },
+  {
+    "result": "True"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_zpgFhYz3xpmekd1HZRTTmgAH",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_zpgFhYz3xpmekd1HZRTTmgAH",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.3 31.3 2751348 590284 ?      Ssl  11:40  72:12 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22623  5.0  0.3 161820  6176 ?        Ss   13:55   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "从返回的进程信息来看，占用CPU最高的进程是一个Java应用程序，进程号为28555，与`productservice`应用相关。接下来，我们可以进一步调查这个Java进程，以确定其CPU使用率高的原因。我们将使用`get_hot_method_stack_tool`来获取该进程的热点方法栈信息，这将帮助我们识别导致高CPU使用率的代码段。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_3NXLAfWsq8MDSh6lMUYeddFe",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_3NXLAfWsq8MDSh6lMUYeddFe",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.6764, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.6764}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2931, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2931}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0027, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0027}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0013}]}, {\"methodName\": \"com.sun.jna.Native.invokeInt\", \"percentage\": 0.0011, \"children\": [{\"methodName\": \"com.sun.jna.Function.invoke\", \"percentage\": 0.0011}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 高CPU使用率的主要原因是`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run`方法，该方法占用的时间百分比为0.6764%。从调用链路来看，这个方法是由`java.util.concurrent.Executors$RunnableAdapter.call`方法调用的，这表明问题出在一个由`Executors`框架执行的任务中。\n- 另一个显著的方法是`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000`，占CPU时间的0.2931%，且同样由`JvmCpuBurnExecutor$1.run`方法调用，这进一步确认了`JvmCpuBurnExecutor`类中的代码是导致高CPU使用率的原因。\n\n解决方案：\n- 检查`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor`类中的代码，特别是`run`方法。确认是否有死循环、冗长计算或其他可能导致CPU持续高占用的操作。\n- 如果该类用于性能测试或负载测试，请确认是否在生产环境中正确配置了限制或在非工作时间运行这些测试以减少对生产环境的影响。\n- 如果是误配置或不需要的测试代码，建议禁用或移除这部分代码，以恢复正常的服务状态。\n\n下一步：\n- 获取`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor`类的源代码，以进一步分析具体的代码逻辑。\n- 考虑在生产环境中暂时减少或停止该类中高CPU使用率的任务，以降低对服务的影响。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\", \"class_full_name\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor\"}",
+    "call_id": "call_n8PfhY9lOQ7z7tBEix3H9arD",
+    "name": "get_source_code_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_n8PfhY9lOQ7z7tBEix3H9arD",
+    "output": "/*\n * Decompiled with CFR.\n * \n * Could not load the following classes:\n *  com.perfma.xchaos.agent.common.logging.Logger\n *  com.perfma.xchaos.agent.common.logging.LoggerFactory\n *  com.perfma.xchaos.agent.common.util.StringUtils\n *  com.perfma.xchaos.agent.core.chaos.ChaosContext\n *  com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor\n */\npackage com.perfma.xchaos.agent.plugin.burncpu;\n\nimport com.perfma.xchaos.agent.common.logging.Logger;\nimport com.perfma.xchaos.agent.common.logging.LoggerFactory;\nimport com.perfma.xchaos.agent.common.util.StringUtils;\nimport com.perfma.xchaos.agent.core.chaos.ChaosContext;\nimport com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\npublic class JvmCpuBurnExecutor\nextends AbstractChaosExecutor {\n    private static final Logger logger = LoggerFactory.getLogger(JvmCpuBurnExecutor.class);\n    private volatile ExecutorService executorService;\n    private volatile boolean flag;\n\n    public JvmCpuBurnExecutor(ChaosContext chaosContext) {\n        super(chaosContext);\n    }\n\n    public void inject() throws Exception {\n        int count;\n        int maxProcessors;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running\");\n        }\n        String cpuCount = (String)this.chaosContext().getParams().get(\"cpu-count\");\n        int threadCount = maxProcessors = Runtime.getRuntime().availableProcessors();\n        if (!StringUtils.isBlank((String)cpuCount) && (count = Integer.parseInt(cpuCount.trim())) > 0 && count < maxProcessors) {\n            threadCount = count;\n        }\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running...\");\n        }\n        this.executorService = Executors.newFixedThreadPool(threadCount);\n        this.flag = true;\n        for (int i = 0; i < threadCount; ++i) {\n            this.executorService.submit((Runnable)new /* Unavailable Anonymous Inner Class!! */);\n            logger.info(\"start jvm cpu full load thread, {}\", (Object)i);\n        }\n    }\n\n    public void recover() throws Exception {\n        this.flag = false;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            this.executorService.shutdownNow();\n            this.executorService = null;\n            logger.info(\"jvm cpu full load stopped\");\n        }\n    }\n\n    static /* synthetic */ boolean access$000(JvmCpuBurnExecutor x0) {\n        return x0.flag;\n    }\n}\n",
+    "type": "function_call_output"
+  },
+  {
+    "result": "True"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_WnPED9aovlvrtnQ0dhiTOnO8",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_WnPED9aovlvrtnQ0dhiTOnO8",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.3 31.3 2751348 590284 ?      Ssl  11:40  72:05 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22533  0.4  0.3 161820  6172 ?        Ss   13:55   0:00 sshd: root@notty\nroot     17663  0.3  2.1 1426412 41228 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 从`ps`命令的结果来看，进程ID为28555的Java应用程序当前占用了较高的CPU资源，达到了53.3%的使用率。根据启动命令信息，此Java应用程序是`productservice-provider-1.0.0-SNAPSHOT.jar`，对应的`app_code`为`productservice`。\n\n下一步：\n- 为了进一步分析这个Java应用程序中具体哪个方法或哪段代码导致了高CPU使用率，我们将使用`get_hot_method_stack_tool`工具来获取Java应用程序的热点方法信息。\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_pXdyaPOApVCxAXhOThBfdl2d",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_pXdyaPOApVCxAXhOThBfdl2d",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.6781, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.6781}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2905, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2905}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0028, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0028}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.UNIXProcess.forkAndExec\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.UNIXProcess.<init>\", \"percentage\": 0.0013}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 从热点方法栈汇总信息中可以看出，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法消耗了较高的CPU使用率，占到了0.6781%的CPU时间。此方法是在并发执行的`Runnable`任务中调用的。\n- 进一步地，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000` 方法也消耗了一定的CPU时间，占到了0.2905%的CPU时间，此方法同样与`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法相关。\n- 这些方法的高CPU使用率表明，该Java应用程序中存在烧CPU的操作，可能是由于循环、计算密集型任务或无效的线程管理导致的。\n\n解决方案：\n- 检查`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类中的`run`方法，查找是否存在无限循环或计算密集型任务。\n- 优化该方法的逻辑，减少不必要的循环或计算，或者优化计算算法。\n- 如果该方法是用于测试或模拟高CPU负载的工具方法，可以考虑在生产环境中禁用或限制其运行。\n\n下一步：\n- 为了进一步确认具体的代码行，我们将使用`get_source_code_tool`工具获取`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类的源代码。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\", \"class_full_name\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor\"}",
+    "call_id": "call_QJ0yrs3fiZgisY8rK4y2mZH4",
+    "name": "get_source_code_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_QJ0yrs3fiZgisY8rK4y2mZH4",
+    "output": "/*\n * Decompiled with CFR.\n * \n * Could not load the following classes:\n *  com.perfma.xchaos.agent.common.logging.Logger\n *  com.perfma.xchaos.agent.common.logging.LoggerFactory\n *  com.perfma.xchaos.agent.common.util.StringUtils\n *  com.perfma.xchaos.agent.core.chaos.ChaosContext\n *  com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor\n */\npackage com.perfma.xchaos.agent.plugin.burncpu;\n\nimport com.perfma.xchaos.agent.common.logging.Logger;\nimport com.perfma.xchaos.agent.common.logging.LoggerFactory;\nimport com.perfma.xchaos.agent.common.util.StringUtils;\nimport com.perfma.xchaos.agent.core.chaos.ChaosContext;\nimport com.perfma.xchaos.agent.core.chaos.executor.AbstractChaosExecutor;\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\npublic class JvmCpuBurnExecutor\nextends AbstractChaosExecutor {\n    private static final Logger logger = LoggerFactory.getLogger(JvmCpuBurnExecutor.class);\n    private volatile ExecutorService executorService;\n    private volatile boolean flag;\n\n    public JvmCpuBurnExecutor(ChaosContext chaosContext) {\n        super(chaosContext);\n    }\n\n    public void inject() throws Exception {\n        int count;\n        int maxProcessors;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running\");\n        }\n        String cpuCount = (String)this.chaosContext().getParams().get(\"cpu-count\");\n        int threadCount = maxProcessors = Runtime.getRuntime().availableProcessors();\n        if (!StringUtils.isBlank((String)cpuCount) && (count = Integer.parseInt(cpuCount.trim())) > 0 && count < maxProcessors) {\n            threadCount = count;\n        }\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            throw new IllegalStateException(\"The jvm cpu full load experiment is running...\");\n        }\n        this.executorService = Executors.newFixedThreadPool(threadCount);\n        this.flag = true;\n        for (int i = 0; i < threadCount; ++i) {\n            this.executorService.submit((Runnable)new /* Unavailable Anonymous Inner Class!! */);\n            logger.info(\"start jvm cpu full load thread, {}\", (Object)i);\n        }\n    }\n\n    public void recover() throws Exception {\n        this.flag = false;\n        if (this.executorService != null && !this.executorService.isShutdown()) {\n            this.executorService.shutdownNow();\n            this.executorService = null;\n            logger.info(\"jvm cpu full load stopped\");\n        }\n    }\n\n    static /* synthetic */ boolean access$000(JvmCpuBurnExecutor x0) {\n        return x0.flag;\n    }\n}\n",
+    "type": "function_call_output"
+  },
+  {
+    "result": "True"
+  }
+]
+
+[
+  {
+    "content": "有一台Linux服务器触发了CPU监控告警，CPU使用率达到了80%\n系统信息：CentOS 8\n机器IP: 10.10.30.84",
+    "role": "user"
+  },
+  {
+    "arguments": "{\"machine_ip\": \"10.10.30.84\", \"path\": null, \"shell\": \"ps aux -ww --sort=-%cpu | head -n 5\"}",
+    "call_id": "call_EkCptJySWD0hvAKzPudF90dP",
+    "name": "shell_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_EkCptJySWD0hvAKzPudF90dP",
+    "output": "USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND\nroot     28555 53.5 31.3 2751348 590284 ?      Ssl  11:40  72:31 java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice -Dperfma.agent.xcenter.server=10.10.30.103:17951 -Dcollector.server=10.10.222.159:16022 -Drun_in_container=false -Dcom.sun.management.jmxremote.port=19991 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -jar /app/productservice-provider-1.0.0-SNAPSHOT.jar --spring.profiles.active=dev\nroot     22748  5.0  0.3 161820  6180 ?        Ss   13:56   0:00 sshd: root@notty\nroot     17663  0.3  2.2 1426412 41756 ?       Sl   Apr15  12:07 /opt/xhasagent/xhasadmin start --heartbeat-interval 5s --report-interval 30s --env AI_DEMO --endpoint tcp://10.10.224.23:16010 --agent-port 10086 --token 9xMlSP9ARRKIW8tGTcYQ1A79PV33/izv82oYj4OBXcHoBwhRvZRDiNU+a4qBQ2BAiQj6RGdVb+4DYYXTdPV8fw== --exporters node,inner\nroot         1  0.0  0.1  51768  3100 ?        Ss   Apr13   0:26 /usr/lib/systemd/systemd --switched-root --system --deserialize 21",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 从返回的 `ps` 命令输出可以看到，`java -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000,suspend=n -javaagent:/perfma-java-agent/agent-bootstrap.jar -DPERFMA_APP_CODE=productservice ...` 命令启动的应用程序占据了 53.5% 的 CPU 使用率。这是因为 `productservice` 应用可能有一个实现效率较低的代码或者进入了某种循环。\n\n下一步：\n- 为了进一步定位问题，我们需要获取该 Java 进程的热点方法信息。通过热点方法信息，我们可以确定哪些方法的执行导致了 CPU 使用率较高，并将分析范围缩小到具体的代码行。\n- 调用 `get_hot_method_stack_tool` 函数获取热点方法信息，以便分析引起高 CPU 使用率的具体方法。\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "arguments": "{\"app_code\": \"productservice\"}",
+    "call_id": "call_FStrU6E7cpFMMvslQvWWrLSy",
+    "name": "get_hot_method_stack_tool",
+    "type": "function_call",
+    "id": "__fake_id__"
+  },
+  {
+    "call_id": "call_FStrU6E7cpFMMvslQvWWrLSy",
+    "output": "获得应用的热点方法栈汇总信息，字段含义为：\n    \n            - methodName: 方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.cleanSomeSlots。\n            - percentage: 方法占用时间的百分比，例如 0.0164 表示 0.0164%。\n            - children: 子方法列表，包含此方法的上一层调用信息。\n                - methodName: 子方法的名字，例如 java.lang.ThreadLocal$ThreadLocalMap.set。\n                - percentage: 子方法的时间百分比，例如 0.0164。\n            \n            完整数据如下: \n            \n            [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.6783, \"children\": [{\"methodName\": \"java.util.concurrent.Executors$RunnableAdapter.call\", \"percentage\": 0.6783}]}, {\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000\", \"percentage\": 0.2906, \"children\": [{\"methodName\": \"com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run\", \"percentage\": 0.2906}]}, {\"methodName\": \"com.sun.jna.Native.invokePointer\", \"percentage\": 0.0028, \"children\": [{\"methodName\": \"com.sun.jna.Function.invokePointer\", \"percentage\": 0.0028}]}, {\"methodName\": \"java.io.FileInputStream.available0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.io.FileInputStream.available\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.Thread.start0\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.Thread.start\", \"percentage\": 0.0013}]}, {\"methodName\": \"java.lang.UNIXProcess.forkAndExec\", \"percentage\": 0.0013, \"children\": [{\"methodName\": \"java.lang.UNIXProcess.<init>\", \"percentage\": 0.0013}]}]\n    ",
+    "type": "function_call_output"
+  },
+  {
+    "id": "__fake_id__",
+    "content": [
+      {
+        "annotations": [],
+        "text": "根因：\n- 通过 `get_hot_method_stack_tool` 获取到的热点方法信息显示，`com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run` 方法占用了 67.83% 的 CPU 时间，而此方法的主要调用路径为 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor.access$000 -> com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor$1.run`，占用了 29.06% 的 CPU 时间。这表明 `productservice` 应用程序中的 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类中存在代码逻辑导致 CPU 使用率异常高。\n- 该类可能是故意用于生成 CPU 负载的测试工具，或者是应用中某个功能的实现存在问题，导致 CPU 使用率升高。如果有涉及到负载测试，请确认该测试是否必要；如果不是，则需要检查代码逻辑，找出问题并优化。\n\n解决方案：\n- 如果该类确实是测试工具的一部分，请停止其运行，观察 CPU 使用率是否恢复正常。\n- 如果该类是应用中的一部分代码逻辑，建议查看 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类的源代码，尝试找出具体的问题代码行进行优化。\n- 如果不确定具体原因，可以尝试获取 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类的源代码，以便进行更详细的分析。\n- 调用 `get_source_code_tool` 函数获取 `com.perfma.xchaos.agent.plugin.burncpu.JvmCpuBurnExecutor` 类的源代码。\n\n\n",
+        "type": "output_text"
+      }
+    ],
+    "role": "assistant",
+    "status": "completed",
+    "type": "message"
+  },
+  {
+    "result": "False"
+  }
+]
